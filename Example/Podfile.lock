@@ -1,0 +1,16 @@
+PODS:
+  - SmartToast (0.1.0)
+
+DEPENDENCIES:
+  - SmartToast (from `../`)
+
+EXTERNAL SOURCES:
+  SmartToast:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  SmartToast: f3c4eca5b087843f943968662412f243fc429c55
+
+PODFILE CHECKSUM: a14db267abea07529ce65d28f509f5b9ce38c536
+
+COCOAPODS: 1.5.3

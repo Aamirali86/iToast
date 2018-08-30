@@ -6,6 +6,5 @@ target 'SmartToast_Example' do
   target 'SmartToast_Tests' do
     inherit! :search_paths
 
-    
   end
 end

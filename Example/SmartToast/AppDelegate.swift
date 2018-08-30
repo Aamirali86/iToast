@@ -2,8 +2,8 @@
 //  AppDelegate.swift
 //  SmartToast
 //
-//  Created by Hussain on 08/30/2018.
-//  Copyright (c) 2018 Hussain. All rights reserved.
+//  Created by Aamir on 08/30/2018.
+//  Copyright (c) 2018 Aamir. All rights reserved.
 //
 
 import UIKit
@@ -12,7 +12,6 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.

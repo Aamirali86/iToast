@@ -1,6 +1,6 @@
 # SmartToast
 
-[![CI Status](https://img.shields.io/travis/Hussain/SmartToast.svg?style=flat)](https://travis-ci.org/Hussain/SmartToast)
+[![CI Status](https://img.shields.io/travis/Aamir/SmartToast.svg?style=flat)](https://travis-ci.org/Aamir/SmartToast)
 [![Version](https://img.shields.io/cocoapods/v/SmartToast.svg?style=flat)](https://cocoapods.org/pods/SmartToast)
 [![License](https://img.shields.io/cocoapods/l/SmartToast.svg?style=flat)](https://cocoapods.org/pods/SmartToast)
 [![Platform](https://img.shields.io/cocoapods/p/SmartToast.svg?style=flat)](https://cocoapods.org/pods/SmartToast)
@@ -22,7 +22,7 @@ pod 'SmartToast'
 
 ## Author
 
-Hussain, muhammad.aamir@venturedive.com
+Aamir, muhammad.aamir@venturedive.com
 
 ## License
 

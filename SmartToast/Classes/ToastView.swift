@@ -14,6 +14,7 @@ public enum ToastError: Error {
   case windowNotLoaded
 }
 
+@available(iOS 9, *)
 public class ToastView: UIView {
   
   let pendingQueue = PriorityQueue()
@@ -59,7 +60,7 @@ public class ToastView: UIView {
   }
   
   public func setupViewLayout(_ toast:UIView, _ superView: UIView, _ position:ToastPosition) {
-    
+
     switch position {
     case .center:
       toast.centerXAnchor.constraint(equalTo: superView.centerXAnchor).isActive = true

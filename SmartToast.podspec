@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SmartToast'
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.summary          = 'Android-like toast with very simple interface.'
 
 # This description is used to generate tags and improve search results.
@@ -28,13 +28,10 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '8.0'
 
-  s.source_files = 'SmartToast/Classes/*'
+  s.source_files = 'SmartToast/Classes/**/*'
   
-  # s.resource_bundles = {
-  #   'SmartToast' => ['SmartToast/Assets/*.png']
-  # }
+  #  s.resource_bundles = {
+  #    'SmartToast' => ['SmartToast/Assets/*.png']
+  #  }
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
 end

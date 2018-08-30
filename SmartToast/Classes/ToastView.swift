@@ -14,7 +14,6 @@ public enum ToastError: Error {
   case windowNotLoaded
 }
 
-@available(iOS 9, *)
 public class ToastView: UIView {
   
   let pendingQueue = PriorityQueue()
@@ -60,33 +59,36 @@ public class ToastView: UIView {
   }
   
   public func setupViewLayout(_ toast:UIView, _ superView: UIView, _ position:ToastPosition) {
-
-    switch position {
-    case .center:
-      toast.centerXAnchor.constraint(equalTo: superView.centerXAnchor).isActive = true
-      toast.centerYAnchor.constraint(equalTo: superView.centerYAnchor).isActive = true
-    case .bottom:
-      toast.centerXAnchor.constraint(equalTo: superView.centerXAnchor).isActive = true
-      toast.bottomAnchor.constraint(equalTo: superView.safeAreaLayoutGuide.bottomAnchor, constant: -64).isActive = true
-    case .top:
-      toast.centerXAnchor.constraint(equalTo: superView.centerXAnchor).isActive = true
-      toast.topAnchor.constraint(equalTo: superView.safeAreaLayoutGuide.topAnchor, constant: 64).isActive = true
+    if #available(iOS 9, *) {
+      switch position {
+      case .center:
+        toast.centerXAnchor.constraint(equalTo: superView.centerXAnchor).isActive = true
+        toast.centerYAnchor.constraint(equalTo: superView.centerYAnchor).isActive = true
+      case .bottom:
+        toast.centerXAnchor.constraint(equalTo: superView.centerXAnchor).isActive = true
+        toast.bottomAnchor.constraint(equalTo: superView.safeAreaLayoutGuide.bottomAnchor, constant: -64).isActive = true
+      case .top:
+        toast.centerXAnchor.constraint(equalTo: superView.centerXAnchor).isActive = true
+        toast.topAnchor.constraint(equalTo: superView.safeAreaLayoutGuide.topAnchor, constant: 64).isActive = true
+      }
+      
+      let trailingConstraint = toast.leftAnchor.constraint(lessThanOrEqualTo: superView.leftAnchor, constant: 16)
+      trailingConstraint.priority = UILayoutPriority(rawValue: 250) //low priority
+      trailingConstraint.isActive = true
+      toast.rightAnchor.constraint(lessThanOrEqualTo: superView.rightAnchor, constant: -16).isActive = true
     }
-
-    let trailingConstraint = toast.leftAnchor.constraint(lessThanOrEqualTo: superView.leftAnchor, constant: 16)
-    trailingConstraint.priority = UILayoutPriority(rawValue: 250) //low priority
-    trailingConstraint.isActive = true
-    toast.rightAnchor.constraint(lessThanOrEqualTo: superView.rightAnchor, constant: -16).isActive = true
   }
   
   private func setupLabelLayout(_ messageLabel:UILabel, _ wrapperView: UIView) {
-    messageLabel.translatesAutoresizingMaskIntoConstraints = false
-    messageLabel.centerXAnchor.constraint(equalTo: wrapperView.centerXAnchor).isActive = true
-    messageLabel.centerYAnchor.constraint(equalTo: wrapperView.centerYAnchor).isActive = true
-    messageLabel.leftAnchor.constraint(equalTo: wrapperView.leftAnchor, constant: 8).isActive = true
-    messageLabel.rightAnchor.constraint(equalTo: wrapperView.rightAnchor, constant: -8).isActive = true
-    wrapperView.heightAnchor.constraint(equalTo: messageLabel.heightAnchor, constant: 16).isActive = true
-    wrapperView.widthAnchor.constraint(equalTo: messageLabel.widthAnchor, constant: 16).isActive = true
+    if #available(iOS 9, *) {
+      messageLabel.translatesAutoresizingMaskIntoConstraints = false
+      messageLabel.centerXAnchor.constraint(equalTo: wrapperView.centerXAnchor).isActive = true
+      messageLabel.centerYAnchor.constraint(equalTo: wrapperView.centerYAnchor).isActive = true
+      messageLabel.leftAnchor.constraint(equalTo: wrapperView.leftAnchor, constant: 8).isActive = true
+      messageLabel.rightAnchor.constraint(equalTo: wrapperView.rightAnchor, constant: -8).isActive = true
+      wrapperView.heightAnchor.constraint(equalTo: messageLabel.heightAnchor, constant: 16).isActive = true
+      wrapperView.widthAnchor.constraint(equalTo: messageLabel.widthAnchor, constant: 16).isActive = true
+    }
   }
   
   public func makeToast(forToast message:String, duration:TimeInterval, position:ToastPosition, style:ToastStyle) {

@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'SmartToast_Example' do
+  pod 'SmartToast', :path => '../'
+
+  target 'SmartToast_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

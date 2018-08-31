@@ -28,7 +28,7 @@ class ViewController: UIViewController {
   }
   
   @IBAction func longLenghtTopToast(_ sender: UIButton) {
-    ToastManager.shared.showToast((sender.titleLabel?.text)!, duration: ToastManager.LENGHT_LONG, position: .top)
+    ToastManager.shared.showToast("Hello world", duration: ToastManager.LENGHT_LONG, position: .top)
   }
   
   @IBAction func customStyleToast(_ sender: UIButton) {

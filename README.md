@@ -47,13 +47,6 @@ pod 'SmartToast'
 
 ### Appearance
 
-Since Toaster 2.0.0, you can use `UIAppearance` to set default appearance. This is an short example to set default background color to red.
-
-```swift
-ToastView.appearance().backgroundColor = .red
-```
-
-
 Supported appearance properties are:
 
 | Property | Type | Description |

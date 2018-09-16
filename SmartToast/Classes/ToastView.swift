@@ -104,13 +104,12 @@ public class ToastView: UIView {
 
 
 public class ToastManager {
-  public static let shared = ToastManager()
-  public let toast = ToastView()
+  public static let toast = ToastView()
 
   public static let LENGHT_SHORT: TimeInterval = 3.0
   public static let LENGHT_LONG: TimeInterval = 5.0
   
-  public func showToast(_ message:String, duration:TimeInterval = ToastManager.LENGHT_SHORT, position:ToastPosition = .bottom, style:ToastStyle = ToastStyle()) {
+  public static func showToast(_ message:String, duration:TimeInterval = ToastManager.LENGHT_SHORT, position:ToastPosition = .bottom, style:ToastStyle = ToastStyle()) {
     toast.makeToast(forToast: message, duration: duration, position: position, style: style)
   }
   

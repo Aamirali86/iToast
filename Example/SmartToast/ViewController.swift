@@ -20,19 +20,19 @@ class ViewController: UIViewController {
   }
   
   @IBAction func shortLenghtBottomToast(_ sender: UIButton) {
-    ToastManager.shared.showToast((sender.titleLabel?.text)!)
+    ToastManager.showToast((sender.titleLabel?.text)!)
   }
   
   @IBAction func shortLenghtCenterToast(_ sender: UIButton) {
-    ToastManager.shared.showToast((sender.titleLabel?.text)!, position: .center)
+    ToastManager.showToast((sender.titleLabel?.text)!, position: .center)
   }
   
   @IBAction func longLenghtTopToast(_ sender: UIButton) {
-    ToastManager.shared.showToast("Hello world", duration: ToastManager.LENGHT_LONG, position: .top)
+    ToastManager.showToast("Hello world", duration: ToastManager.LENGHT_LONG, position: .top)
   }
   
   @IBAction func customStyleToast(_ sender: UIButton) {
-    ToastManager.shared.showToast((sender.titleLabel?.text)!, style:customizeAppearance())
+    ToastManager.showToast((sender.titleLabel?.text)!, style:customizeAppearance())
   }
   
   private func customizeAppearance() -> ToastStyle {

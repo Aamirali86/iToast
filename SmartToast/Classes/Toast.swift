@@ -24,7 +24,6 @@ class Toast: Operation {
   let delay:TimeInterval
   let position:ToastPosition
   
-
   init(view: ToastView, duration: TimeInterval, position:ToastPosition) {
     self.toast = view
     self.position = position

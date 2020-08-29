@@ -1,16 +1,16 @@
 PODS:
-  - SmartToast (0.1.0)
+  - SmartToast (0.1.3)
 
 DEPENDENCIES:
-  - SmartToast (from `../`)
+  - SmartToast
 
-EXTERNAL SOURCES:
-  SmartToast:
-    :path: "../"
+SPEC REPOS:
+  trunk:
+    - SmartToast
 
 SPEC CHECKSUMS:
-  SmartToast: f3c4eca5b087843f943968662412f243fc429c55
+  SmartToast: 9c47e20ba9667b3ca94b486d9d2d0d9dd5ff11aa
 
-PODFILE CHECKSUM: a14db267abea07529ce65d28f509f5b9ce38c536
+PODFILE CHECKSUM: 9743083601226c87d9b248a2a1bffabda10a2b00
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.10.0.beta.1

@@ -19,19 +19,19 @@ class PriorityQueue {
 }
 
 class Toast: Operation {
-  
-  let toast:ToastView
-  let delay:TimeInterval
-  let position:ToastPosition
-  
-  init(view: ToastView, duration: TimeInterval, position:ToastPosition) {
+
+  let toast: ToastView
+  let delay: TimeInterval
+  let position: ToastPosition
+
+  init(view: ToastView, duration: TimeInterval, position: ToastPosition) {
     self.toast = view
     self.position = position
     self.delay = duration
   }
-  
+
   override open func main() {
-    
+
     DispatchQueue.main.async {
       do {
         guard let window = UIApplication.shared.keyWindow else { throw ToastError.windowNotLoaded }
@@ -41,9 +41,9 @@ class Toast: Operation {
         print("Window not loaded yet")
       } catch {}
     }
-    
+
     sleep(UInt32(self.delay))
-    
+
     DispatchQueue.main.async {
       UIView.animate(withDuration: 0.5, delay: self.delay, options: .curveEaseOut, animations: {
         self.toast.alpha = 1.0
@@ -54,5 +54,5 @@ class Toast: Operation {
     }
 
   }
-  
+
 }

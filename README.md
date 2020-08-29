@@ -66,7 +66,7 @@ Demo
 
 ## Author
 
-Aamir, muhammad.aamir@venturedive.com
+Muhammad Aamir, aamir-muhammad@hotmail.com
 
 ## License
 
